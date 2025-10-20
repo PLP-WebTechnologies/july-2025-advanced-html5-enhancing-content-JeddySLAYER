@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- =======================
+         META & SEO
+    ======================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enhanced HTML5 page demonstrating tables, lists, media, and advanced form handling with built-in validation.">
+    <meta name="author" content="Your Name">
+    <title>Enhanced HTML5 Content & Forms</title>
+</head>
+
+<body>
+    <!-- =======================
+         HEADER
+    ======================= -->
+    <header>
+        <h1>Community Fitness Club</h1>
+        <p>Join a supportive community dedicated to health and wellness.</p>
+    </header>
+
+    <!-- =======================
+         MAIN CONTENT
+    ======================= -->
+    <main>
+        <!-- SECTION 1: LISTS -->
+        <section aria-labelledby="benefits-heading">
+            <h2 id="benefits-heading">Our Membership Benefits</h2>
+            <ul>
+                <li>Access to all gym equipment and training areas</li>
+                <li>Free nutrition and workout consultations</li>
+                <li>Weekly yoga and spinning classes</li>
+                <li>Exclusive member discounts on sportswear</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 2: TABLE -->
+        <section aria-labelledby="schedule-heading">
+            <h2 id="schedule-heading">Weekly Class Schedule</h2>
+            <table border="1" cellspacing="0" cellpadding="8">
+                <caption>Class Timetable</caption>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Class</th>
+                        <th>Time</th>
+                        <th>Instructor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Yoga</td>
+                        <td>07:00 - 08:00</td>
+                        <td>Emma Lee</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>HIIT</td>
+                        <td>18:00 - 19:00</td>
+                        <td>James Miller</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Spinning</td>
+                        <td>17:00 - 18:00</td>
+                        <td>Sarah Johnson</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Pilates</td>
+                        <td>08:00 - 09:00</td>
+                        <td>Maria Lopez</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION 3: MEDIA -->
+        <section aria-labelledby="media-heading">
+            <h2 id="media-heading">Explore Our Facilities</h2>
+            <figure>
+                <img src="gym-interior.jpg" alt="Modern gym interior with workout equipment" width="400">
+                <figcaption>Our fully equipped fitness center.</figcaption>
+            </figure>
+
+            <figure>
+                <video controls width="400">
+                    <source src="fitness-tour.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Watch a quick tour of our fitness club.</figcaption>
+            </figure>
+        </section>
+
+        <!-- SECTION 4: FORM -->
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">Membership Registration Form</h2>
+
+            <form action="/submit" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="firstName" placeholder="John" required minlength="2" maxlength="30">
+                    
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lastName" placeholder="Doe" required minlength="2" maxlength="30">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0123456789" required>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership Details</legend>
+
+                    <label for="plan">Select Plan:</label>
+                    <select id="plan" name="plan" required>
+                        <option value="">--Choose a Plan--</option>
+                        <option value="basic">Basic - $20/month</option>
+                        <option value="premium">Premium - $35/month</option>
+                        <option value="vip">VIP - $50/month</option>
+                    </select>
+
+                    <p>Preferred Workout Time:</p>
+                    <label><input type="radio" name="workout_time" value="morning" required> Morning</label>
+                    <label><input type="radio" name="workout_time" value="evening"> Evening</label>
+
+                    <p>Facilities Interested In:</p>
+                    <label><input type="checkbox" name="facility" value="yoga"> Yoga</label>
+                    <label><input type="checkbox" name="facility" value="weights"> Weight Training</label>
+                    <label><input type="checkbox" name="facility" value="cardio"> Cardio</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Setup</legend>
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="john_doe" required pattern="[A-Za-z0-9_]{4,15}" title="4-15 characters, letters, numbers, and underscores only">
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required minlength="6" placeholder="•••••••">
+
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirmPassword" required minlength="6" placeholder="•••••••">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Terms & Submission</legend>
+
+                    <label>
+                        <input type="checkbox" name="terms" required> I agree to the <a href="#">terms and conditions</a>
+                    </label>
+
+                    <button type="submit">Submit Registration</button>
+                    <button type="reset">Reset Form</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!-- =======================
+         FOOTER
+    ======================= -->
+    <footer>
+        <p>&copy; 2025 Community Fitness Club | Designed for HTML5 Accessibility & Usability</p>
+    </footer>
+</body>
+</html>
